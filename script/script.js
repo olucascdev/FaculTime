@@ -33,5 +33,36 @@ document.addEventListener('DOMContentLoaded', function () {
             <p class="text-lg font-semibold">Data prevista para formatura: <strong>${resultado.dataFormatura}</strong></p>
             <p class="text-lg font-semibold">Tempo restante: <strong>${resultado.anosRestantes} anos e ${resultado.mesesRestantes} meses</strong></p>
         `;
+        iniciarConfetes();
     });
+
+    function iniciarConfetes() {
+        tsParticles.load("tsparticles", {
+            fullScreen: { enable: false },
+            particles: {
+                number: { value: 0 },
+                shape: { type: ["circle", "square", "triangle"] },
+                size: { value: { min: 4, max: 8 } },
+                move: {
+                    enable: true,
+                    speed: 4,
+                    direction: "bottom",
+                    outModes: { default: "out" }
+                },
+                opacity: { value: 0.8 },
+                color: {
+                    value: ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff"]
+                }
+            },
+            emitters: {
+                position: { x: 50, y: 0 },
+                rate: { quantity: 5, delay: 0.2 },
+                life: { duration: 2.5, count: 1 } // Agora para após 2.5 segundos
+            }
+        });
+    }
+    
+    document.getElementById("resetar").addEventListener("click", function () {
+        location.reload(); // Recarrega a página, resetando tudo
+    });    
 });

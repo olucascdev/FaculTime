@@ -1,39 +1,115 @@
-@charset "utf8";
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
 :root {
     --background: #0f0e17;
     --headline: #fffffe;
-    --paragrafo:#a7a9be;
+    --paragrafo: #a7a9be;
     --botao: #ff8906;
     --botaotex: #fffffe;
 }
 
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
     background-color: var(--background);
-}
-
-h1{
     color: var(--headline);
-    font-family: 'Bebas Neue';
-    font-size: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
 }
 
-label{
-    color: var(--paragrafo);
-}
-
-button{
-    background-color: var(--botao);
-    color:var(--botaotex);
+/* Confetes */
+#tsparticles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .container {
-    background-color: var(--headline);
+    background: #1a1b26;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 350px;
+    position: relative;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+label {
+    font-size: 1rem;
+    color: var(--paragrafo);
+    display: block;
+    text-align: left;
+    margin-top: 0.8rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid var(--paragrafo);
+    background: transparent;
+    color: var(--headline);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 1.5rem;
+    background: var(--botao);
+    color: var(--botaotex);
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e07a05;
+}
+#resetar {
+    width: 50%;
+    padding: 10px;
+    margin-top: 1.5rem;
+    background: var(--botao);
+    color: var(--botaotex);
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+option {
+    background-color: var(--background);
+    color: var(--botaotex);
+}
+
+#resetar:hover {
+    background: #e07a05;
+}
+
+#resultado {
+    margin-top: 1.5rem;
+    padding: 10px;
+    font-size: 1rem;
+    color: var(--headline);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
 }

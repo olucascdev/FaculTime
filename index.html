@@ -6,34 +6,38 @@
     <title>FaculTime</title>
     <link rel="stylesheet" href="/styles/style.css">
     <script src="script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
 <body>
+    <div id="tsparticles"></div>
     <div class="container">
         
         <form id="calcForm">
             <h1>FaculTime</h1>
 
-            <label>Seu Curso: </label><br>
+            <label>Seu Curso: </label>
             <input type="text" id="faculdade" required>
             <br>
             
-            <label>Ano de Entrada: </label><br>
+            <label>Ano de Entrada: </label>
             <input type="number" id="anoEntrada" required>
             <br>
 
-            <label for="semestreEntrada">Semestre de Entrada: </label><br>
+            <label for="semestreEntrada">Semestre de Entrada: </label>
             <select id="semestreEntrada">
                 <option value="1">1º Semestre</option>
                 <option value="2">2º Semestre</option>
             </select>
             <br>
 
-            <label for="totalPeriodos">Quantidade de Períodos: </label><br>
+            <label for="totalPeriodos">Quantidade de Períodos: </label>
             <input type="number" id="totalPeriodos" required>
             <br>
 
             <button type="submit">Calcular</button>
             <br>
+
+            <button  id="resetar"   type="reset">Resetar</button>
 
         </form>
         

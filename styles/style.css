@@ -1,3 +1,12 @@
+@charset "utf8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --background: #0f0e17;
     --headline: #fffffe;
@@ -8,4 +17,23 @@
 
 body{
     background-color: var(--background);
+}
+
+h1{
+    color: var(--headline);
+    font-family: 'Bebas Neue';
+    font-size: 72px;
+}
+
+label{
+    color: var(--paragrafo);
+}
+
+button{
+    background-color: var(--botao);
+    color:var(--botaotex);
+}
+
+.container {
+    background-color: var(--headline);
 }
